@@ -2,7 +2,6 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   root: {
-    minHeight: '100vh',
     '& .MuiInput-underline:before': {
       borderBottom: '1.2px solid rgba(0, 0, 0, 0.2)',
     },
@@ -10,16 +9,34 @@ const useStyles = makeStyles(() => ({
   authWrapper: {
     display: 'flex',
     alignItems: 'flex-start',
-    justifyContent: 'space-between',
     flexDirection: 'column',
     minHeight: '100vh',
-    paddingTop: 23,
+    paddingTop: 20,
+    backgroundColor: '#F5F5F5',
+  },
+  formContainer: {
+    boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    maxHeight: '600',
+    borderRadius: 8,
+    margin: 'auto',
+    backgroundColor: 'white',
   },
   welcome: {
     fontSize: 26,
-    paddingBottom: 20,
+    paddingBottom: '3rem',
+    paddingTop: '2rem',
     color: '#000000',
-    fontWeight: 700,
+    textAlign: 'center',
+  },
+  bottomWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: '1.5rem',
   },
 }));
 

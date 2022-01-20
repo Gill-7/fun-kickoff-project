@@ -4,7 +4,8 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles((theme: Theme) => ({
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(2),
+    textAlign: 'center',
   },
   label: {
     fontSize: 19,
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: '1rem',
     height: '2rem',
     padding: '5px',
+    width: '100%',
   },
   forgot: {
     paddingRight: 10,
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: 56,
     borderRadius: theme.shape.borderRadius,
     fontSize: 16,
-    backgroundColor: '#3a8dff',
+    backgroundColor: '#f14140',
     fontWeight: 'bold',
   },
 }));

@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
+    textAlign: 'center',
   },
   label: {
     fontSize: 19,
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: '.8rem',
     height: '2rem',
     padding: '5px',
+    width: '100%',
   },
   forgot: {
     paddingRight: 10,
