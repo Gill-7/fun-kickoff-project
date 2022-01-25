@@ -2,7 +2,7 @@ import { Navbar } from '../../components/Navbar/Navbar';
 import { Grid, Box, ListItem } from '@mui/material';
 import useStyles from './useStyles';
 import { Link, Route } from 'react-router-dom';
-import ProfileEdit from './ProfileSideBar/ProfileEdit';
+import ProfileEdit from './ProfileSideBar/ProfileEdit/ProfileEdit';
 import ProfileGallery from './ProfileSideBar/ProfileGallery';
 import ProfilePayment from './ProfileSideBar/ProfilePayment';
 import ProfileAvailability from './ProfileSideBar/ProfileAvailability';
@@ -16,7 +16,7 @@ export default function Profile(): JSX.Element {
     <>
       <Navbar />
       <Box sx={{ width: '100%', p: 3 }} style={{ backgroundColor: '#f5f5f5', marginTop: '4px' }}>
-        <Grid container columnSpacing={{ xs: 2 }} style={{ marginTop: '2rem' }}>
+        <Grid container columnSpacing={{ xs: 2 }} style={{ marginTop: '1rem' }}>
           <Grid item xs={0.5} sm={2.0} md={2.0} lg={2.0} xl={2.85} />
           <Grid
             item
@@ -28,22 +28,46 @@ export default function Profile(): JSX.Element {
             className={classes.leftColumn}
             style={{ marginTop: '1rem' }}
           >
-            <ListItem component={Link} to="/user/edit-profile" style={{ margin: '1rem 0 1rem 0', padding: 0 }}>
+            <ListItem
+              component={Link}
+              to="/user/edit-profile"
+              style={{ margin: '1rem 0 1rem 0', padding: 0, color: 'black' }}
+            >
               Edit profile
             </ListItem>
-            <ListItem component={Link} to="/user/gallery-profile" style={{ margin: '1rem 0 1rem 0', padding: 0 }}>
+            <ListItem
+              component={Link}
+              to="/user/gallery-profile"
+              style={{ margin: '1rem 0 1rem 0', padding: 0, color: 'black' }}
+            >
               Profile Photo
             </ListItem>
-            <ListItem component={Link} to="/user/availability-profile" style={{ margin: '1rem 0 1rem 0', padding: 0 }}>
+            <ListItem
+              component={Link}
+              to="/user/availability-profile"
+              style={{ margin: '1rem 0 1rem 0', padding: 0, color: 'black' }}
+            >
               Availability
             </ListItem>
-            <ListItem component={Link} to="/user/payment-profile" style={{ margin: '1rem 0 1rem 0', padding: 0 }}>
+            <ListItem
+              component={Link}
+              to="/user/payment-profile"
+              style={{ margin: '1rem 0 1rem 0', padding: 0, color: 'black' }}
+            >
               Payment
             </ListItem>
-            <ListItem component={Link} to="/user/security-profile" style={{ margin: '1rem 0 1rem 0', padding: 0 }}>
+            <ListItem
+              component={Link}
+              to="/user/security-profile"
+              style={{ margin: '1rem 0 1rem 0', padding: 0, color: 'black' }}
+            >
               Security
             </ListItem>
-            <ListItem component={Link} to="/user/settings-profile" style={{ margin: '1rem 0 1rem 0', padding: 0 }}>
+            <ListItem
+              component={Link}
+              to="/user/settings-profile"
+              style={{ margin: '1rem 0 1rem 0', padding: 0, color: 'black' }}
+            >
               Settings
             </ListItem>
           </Grid>
