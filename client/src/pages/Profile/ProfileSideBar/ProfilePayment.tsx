@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+
 export default function ProfilePayment(): JSX.Element {
-  return <h2>Profile Payment</h2>;
+  return <Typography variant="h2">Profile Payment</Typography>;
 }

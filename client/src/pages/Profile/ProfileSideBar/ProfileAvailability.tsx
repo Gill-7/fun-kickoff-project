@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+
 export default function ProfileAvailability(): JSX.Element {
-  return <h2>Profile Availability</h2>;
+  return <Typography variant="h2">Profile Availability</Typography>;
 }

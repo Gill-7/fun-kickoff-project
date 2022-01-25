@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+
 export default function ProfileSecurity(): JSX.Element {
-  return <h2>Profile Security</h2>;
+  return <Typography variant="h2">Profile Security</Typography>;
 }

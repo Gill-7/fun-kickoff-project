@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+
 export default function ProfileGallery(): JSX.Element {
-  return <h2>Profile Gallery</h2>;
+  return <Typography variant="h2">Profile Gallery</Typography>;
 }

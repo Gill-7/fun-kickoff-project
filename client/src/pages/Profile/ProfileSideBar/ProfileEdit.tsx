@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+
 export default function ProfileEdit(): JSX.Element {
-  return <h2>Edit Profile</h2>;
+  return <Typography variant="h2">Edit Profile</Typography>;
 }
