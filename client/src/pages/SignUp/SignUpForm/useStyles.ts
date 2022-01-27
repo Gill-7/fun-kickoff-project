@@ -1,7 +1,7 @@
-import { Theme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
+import { theme } from '../../../themes/theme';
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(2),
@@ -29,8 +29,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: 56,
     borderRadius: theme.shape.borderRadius,
     fontSize: 16,
-    backgroundColor: '#f14140',
+    textTransform: 'uppercase',
+    backgroundColor: theme.palette.primary.main,
     fontWeight: 'bold',
+    marginTop: '1rem',
+    marginBottom: '1rem',
   },
 }));
 

@@ -39,20 +39,29 @@ export default function Login(): JSX.Element {
   return (
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12} sm={12} elevation={6} component={Paper}>
-        <Box className={classes.authWrapper}>
+        <Box className={classes.authWrapper} display="flex" alignItems="flex-start" flexDirection="column">
           <AuthHeader linkTo="/signup" asideText="Don't have an account?" btnText="Create account" />
-          <Box minWidth={300} p={3} alignSelf="center" className={classes.formContainer}>
+          <Box
+            minWidth={300}
+            p={3}
+            alignSelf="center"
+            className={classes.formContainer}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Grid container>
               <Grid item xs>
-                <Typography className={classes.welcome} style={{ fontWeight: 700 }} variant="h4">
+                <Typography className={classes.welcome} variant="h4">
                   Welcome back!
                 </Typography>
               </Grid>
             </Grid>
             <LoginForm handleSubmit={handleSubmit} />
-            <Box p={1} alignSelf="center" className={classes.bottomWrapper}>
-              <Typography style={{ fontWeight: 700, fontSize: 14 }}>Already a member?</Typography>
-              <Link to="/signup" style={{ color: '#f14140', fontWeight: 700, fontSize: 14 }}>
+            <Box p={1} alignSelf="center" display="flex" flexDirection="row">
+              <Typography className={classes.userSignupText}>Already a member?</Typography>
+              <Link to="/signup" className={classes.userSignupBtn}>
                 Signup
               </Link>
             </Box>

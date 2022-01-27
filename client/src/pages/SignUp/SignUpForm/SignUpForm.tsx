@@ -53,7 +53,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
           <TextField
             id="email"
             label="Your Email"
-            sx={{ width: '65%' }}
+            sx={{ width: '52%' }}
             margin="normal"
             name="email"
             autoFocus
@@ -65,7 +65,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
           <TextField
             id="username"
             label="Your name"
-            sx={{ width: '65%' }}
+            sx={{ width: '52%' }}
             margin="normal"
             name="username"
             autoComplete="email"
@@ -78,7 +78,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             id="password"
             label="Create a password"
             margin="normal"
-            sx={{ width: '65%' }}
+            sx={{ width: '52%' }}
             type="password"
             autoComplete="current-password"
             helperText={touched.password ? errors.password : ''}
@@ -87,9 +87,9 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
             onChange={handleChange}
           />
 
-          <Box textAlign="center" marginTop={5}>
+          <Box textAlign="center" mt="4rem">
             <Button type="submit" size="large" variant="contained" color="primary" className={classes.submit}>
-              {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'SIGN UP'}
+              {isSubmitting ? <CircularProgress /> : 'Signup'}
             </Button>
           </Box>
         </form>

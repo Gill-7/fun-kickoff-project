@@ -40,20 +40,30 @@ export default function Register(): JSX.Element {
   return (
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12} sm={12} elevation={6} component={Paper}>
-        <Box className={classes.authWrapper}>
+        <Box className={classes.authWrapper} display="flex" alignItems="flex-start" flexDirection="column">
           <AuthHeader linkTo="/login" asideText="Already have an account?" btnText="Login" />
-          <Box minWidth="300px" p={3} alignSelf="center" className={classes.formContainer}>
+          <Box
+            minWidth="300px"
+            alignSelf="center"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+            className={classes.formContainer}
+          >
             <Grid container>
               <Grid item xs>
-                <Typography className={classes.welcome} style={{ fontWeight: 700 }} variant="h4">
+                <Typography className={classes.welcome} variant="h4">
                   Sign up
                 </Typography>
               </Grid>
             </Grid>
             <SignUpForm handleSubmit={handleSubmit} />
-            <Box p={1} alignSelf="center" className={classes.bottomWrapper}>
-              <Typography style={{ fontWeight: 700, fontSize: 14 }}>Already a member?</Typography>
-              <Link to="/login" style={{ color: '#f14140', fontWeight: 700, fontSize: 14 }}>
+            <Box p={1} alignSelf="center" display="flex" flexDirection="row" mb="2.0rem" mt="2.5rem">
+              <Typography className={classes.userLoginText} variant="subtitle2">
+                Already a member?
+              </Typography>
+              <Link to="/login" className={classes.userLoginBtn}>
                 Login
               </Link>
             </Box>
