@@ -1,6 +1,7 @@
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import { FormikHelpers } from 'formik';
 import useStyles from './useStyles';
@@ -37,26 +38,34 @@ export default function Login(): JSX.Element {
 
   return (
     <Grid container component="main" className={classes.root}>
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} square>
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="flex-start"
-          flexDirection="column"
-          className={classes.authWrapper}
-        >
+      <Grid item xs={12} sm={12} elevation={6} component={Paper}>
+        <Box className={classes.authWrapper} display="flex" alignItems="flex-start" flexDirection="column">
           <AuthHeader linkTo="/signup" asideText="Don't have an account?" btnText="Create account" />
-          <Box width="100%" maxWidth={450} p={3} alignSelf="center">
+          <Box
+            minWidth={300}
+            p={3}
+            alignSelf="center"
+            className={classes.formContainer}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Grid container>
               <Grid item xs>
-                <Typography className={classes.welcome} component="h1" variant="h5">
+                <Typography className={classes.welcome} variant="h4">
                   Welcome back!
                 </Typography>
               </Grid>
             </Grid>
             <LoginForm handleSubmit={handleSubmit} />
+            <Box p={1} alignSelf="center" display="flex" flexDirection="row">
+              <Typography className={classes.userSignupText}>Already a member?</Typography>
+              <Link to="/signup" className={classes.userSignupBtn}>
+                Signup
+              </Link>
+            </Box>
           </Box>
-          <Box p={1} alignSelf="center" />
         </Box>
       </Grid>
     </Grid>
