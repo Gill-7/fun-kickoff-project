@@ -39,15 +39,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar
-      position="static"
-      style={{
-        background: '#ffffff',
-        boxShadow:
-          '- 1px 9px 15px - 1px rgba(0, 0, 0, 0.2), 0px 10px 15px - 3px rgba(0, 0, 0, 0.1), 0px 10px 15px - 3px rgba(0, 0, 0, 0.1)',
-        height: '4.2rem',
-      }}
-    >
+    <AppBar position="static" className={classes.mainContainer}>
       <Toolbar>
         <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
           <MenuIcon />
