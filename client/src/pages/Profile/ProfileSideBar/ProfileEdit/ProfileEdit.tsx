@@ -18,7 +18,7 @@ export default function ProfileEdit(): JSX.Element {
   const classes = useStyles();
 
   return (
-    <form className={classes.form}>
+    <form>
       <Box sx={{ width: '100%' }}>
         <Grid container>
           <Grid item xs={12}>
@@ -30,17 +30,21 @@ export default function ProfileEdit(): JSX.Element {
 
         <Grid container className={classes.boxWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText}>First Name</label>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 700 }} className={classes.inputLabelText}>
+              First Name
+            </InputLabel>
           </Grid>
-          <Grid item xs={8} className={classes.inputField}>
+          <Grid item xs={8.5} className={classes.inputField}>
             <TextField id="first-name" fullWidth label="First Name" variant="outlined" autoFocus />
           </Grid>
-          <Grid item xs={0.8} />
+          <Grid item xs={0.3} />
         </Grid>
 
         <Grid container className={classes.boxWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText}>Last Name</label>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 900 }} className={classes.inputLabelText}>
+              Last Name
+            </InputLabel>
           </Grid>
           <Grid item xs={8} className={classes.inputField}>
             <TextField id="last-name" fullWidth label="Last Name" variant="outlined" />
@@ -50,7 +54,9 @@ export default function ProfileEdit(): JSX.Element {
 
         <Grid container className={classes.boxWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText}>Gender</label>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 900 }} className={classes.inputLabelText}>
+              Gender
+            </InputLabel>
           </Grid>
           <Grid item xs={3} className={classes.inputField}>
             <FormControl fullWidth>
@@ -66,7 +72,9 @@ export default function ProfileEdit(): JSX.Element {
 
         <Grid container className={classes.boxWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText}>Birth Date</label>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 900 }} className={classes.inputLabelText}>
+              Birth Date
+            </InputLabel>
           </Grid>
           <Grid item xs={3} className={classes.inputField}>
             <LocalizationProvider dateAdapter={DateAdapter}>
@@ -78,7 +86,9 @@ export default function ProfileEdit(): JSX.Element {
 
         <Grid container className={classes.boxWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText}>Email Address</label>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 900 }} className={classes.inputLabelText}>
+              Email Address
+            </InputLabel>
           </Grid>
           <Grid item xs={8} className={classes.inputField}>
             <TextField id="email-address" fullWidth label="user@gmail.com" variant="outlined" />
@@ -88,7 +98,9 @@ export default function ProfileEdit(): JSX.Element {
 
         <Grid container className={classes.boxWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText}>Phone Number</label>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 900 }} className={classes.inputLabelText}>
+              Phone Number
+            </InputLabel>
           </Grid>
           <Grid item xs={4}>
             <Typography style={{ fontStyle: 'italic', fontSize: '0.75rem' }}>No phone number entered</Typography>
@@ -106,9 +118,9 @@ export default function ProfileEdit(): JSX.Element {
 
         <Grid container className={classes.boxWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText} style={{ fontWeight: 700 }}>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 900 }} className={classes.inputLabelText}>
               Where you live
-            </label>
+            </InputLabel>
           </Grid>
           <Grid item xs={8} className={classes.inputField}>
             <TextField id="address" fullWidth label="Address" variant="outlined" />
@@ -118,9 +130,9 @@ export default function ProfileEdit(): JSX.Element {
 
         <Grid container className={classes.boxDescribeWrapper}>
           <Grid item xs={3.2} style={{ textAlign: 'right' }}>
-            <label className={classes.labelText} style={{ fontWeight: 700, padding: 0 }}>
+            <InputLabel sx={{ fontSize: 12, fontWeight: 900 }} className={classes.inputLabelText}>
               Describe Yourself
-            </label>
+            </InputLabel>
           </Grid>
           <Grid item xs={8} className={classes.inputField}>
             <TextareaAutosize

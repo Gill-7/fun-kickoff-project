@@ -1,9 +1,6 @@
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
-  form: {
-    width: '70%',
-  },
   heading: {
     textAlign: 'center',
     padding: '2rem 2rem 0.5rem 2rem',
@@ -19,10 +16,8 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'right',
     margin: '1.2rem 1rem 0.8rem 0',
   },
-  labelText: {
-    fontWeight: 900,
-    fontSize: '0.70rem',
-    marginRight: '1rem',
+  inputLabelText: {
+    marginRight: '1.2rem',
     textTransform: 'uppercase',
   },
   inputField: {

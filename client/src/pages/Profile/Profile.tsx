@@ -17,14 +17,14 @@ export default function Profile(): JSX.Element {
       <Navbar />
       <Box sx={{ width: '100%', p: 3 }} style={{ backgroundColor: '#f5f5f5', marginTop: '4px' }}>
         <Grid container columnSpacing={{ xs: 2 }} style={{ marginTop: '1rem' }}>
-          <Grid item xs={0.5} sm={2.0} md={2.0} lg={2.0} xl={2.85} />
+          <Grid item xs={0.5} sm={1.0} md={1.4} lg={2.0} xl={2.2} />
           <Grid
             item
             xs={1.5}
-            sm={1.0}
-            md={1.0}
+            sm={1.4}
+            md={1.3}
             lg={1.0}
-            xl={0.65}
+            xl={1.0}
             className={classes.leftColumn}
             style={{ marginTop: '1rem' }}
           >
@@ -71,8 +71,8 @@ export default function Profile(): JSX.Element {
               Settings
             </ListItem>
           </Grid>
-          <Grid item xs={1.0} sm={1.0} md={1.25} lg={0.75} xl={0.5} />
-          <Grid item xs={8} sm={7} md={6.0} lg={5.0} xl={4.5} className={classes.rightColumn}>
+          <Grid item xs={1.0} sm={0.5} md={0.8} lg={0.7} xl={0.5} />
+          <Grid item xs={8} sm={9} md={8} lg={5.5} xl={5.5} className={classes.rightColumn}>
             <Route path={`/user/edit-profile`} component={ProfileEdit} />
             <Route path={`/user/gallery-profile`} component={ProfileGallery} />
             <Route path={`/user/payment-profile`} component={ProfilePayment} />
@@ -80,7 +80,7 @@ export default function Profile(): JSX.Element {
             <Route path={`/user/security-profile`} component={ProfileSecurity} />
             <Route path={`/user/settings-profile`} component={ProfileSettings} />
           </Grid>
-          <Grid item xs={1.0} sm={1.0} md={1.25} lg={1.0} xl={1.0} />
+          <Grid item xs={1.0} sm={0.6} md={0.4} lg={0.5} xl={0.5} />
         </Grid>
       </Box>
     </>
