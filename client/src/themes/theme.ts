@@ -6,11 +6,12 @@ export const theme = createTheme({
     fontSize: 12,
     button: {
       textTransform: 'none',
-      fontWeight: 700,
+      fontWeight: 900,
     },
   },
   palette: {
-    primary: { main: '#3A8DFF' },
+    primary: { main: '#ffffff' },
+    secondary: { main: '#000000' },
   },
   shape: {
     borderRadius: 5,

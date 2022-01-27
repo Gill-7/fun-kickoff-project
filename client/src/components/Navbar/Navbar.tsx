@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/useAuthContext';
+import img from '../../Images/logo.png';
+import useStyles from './useStyles';
 import {
   AppBar,
   Toolbar,
@@ -7,14 +10,16 @@ import {
   Typography,
   Menu,
   MenuItem,
+  ListItem,
   ListItemIcon,
   ListItemText,
-  Divider,
 } from '@mui/material';
 import { Menu as MenuIcon, AccountCircle } from '@mui/icons-material';
-import { Person as ProfileIcon, Logout as LogoutIcon, Settings as SettingsIcon } from '@mui/icons-material';
+import { Person as ProfileIcon, Logout as LogoutIcon } from '@mui/icons-material';
 
 const Navbar: React.FC = () => {
+  const classes = useStyles();
+
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { loggedInUser, logout } = useAuth();
 
@@ -34,13 +39,15 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.mainContainer}>
       <Toolbar>
         <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          My App
+          <Link to="/dashboard">
+            <img src={img} className={classes.logoImg} alt="logo" />
+          </Link>
         </Typography>
         {loggedInUser && (
           <>
@@ -50,7 +57,7 @@ const Navbar: React.FC = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleMenuOpen}
-              color="inherit"
+              style={{ color: '#f14140' }}
             >
               <AccountCircle />
             </IconButton>
@@ -71,22 +78,17 @@ const Navbar: React.FC = () => {
             >
               <MenuItem onClick={handleClose}>
                 <ListItemIcon>
-                  <SettingsIcon fontSize="small" />
+                  <ProfileIcon fontSize="small" style={{ marginLeft: '7px' }} />
                 </ListItemIcon>
-                <ListItemText>Settings</ListItemText>
+                <ListItem className={classes.profileName} component={Link} to="/user/edit-profile">
+                  Profile
+                </ListItem>
               </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <ListItemIcon>
-                  <ProfileIcon fontSize="small" />
-                </ListItemIcon>
-                <ListItemText>Profile</ListItemText>
-              </MenuItem>
-              <Divider />
               <MenuItem onClick={handleLogout}>
                 <ListItemIcon>
-                  <LogoutIcon fontSize="small" />
+                  <LogoutIcon fontSize="small" style={{ marginLeft: '9px' }} />
                 </ListItemIcon>
-                <ListItemText>Logout</ListItemText>
+                <ListItemText className={classes.logoutName}>Logout</ListItemText>
               </MenuItem>
             </Menu>
           </>
